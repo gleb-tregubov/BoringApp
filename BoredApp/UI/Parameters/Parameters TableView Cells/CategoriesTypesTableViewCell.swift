@@ -35,6 +35,7 @@ class CategoriesTypesTableViewCell: UITableViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.showsVerticalScrollIndicator = false
         view.isScrollEnabled = false
+//        view.allowsMultipleSelection = true
         
         view.register(CategoryTypeCollectionViewCell.self, forCellWithReuseIdentifier: CategoryTypeCollectionViewCell.reuseIdentifier)
         

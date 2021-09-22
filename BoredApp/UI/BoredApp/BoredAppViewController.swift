@@ -5,6 +5,11 @@
 //  Created by Gleb Tregubov on 21.09.2021.
 //
 
+// 😈
+// be careful
+// check Main.storyboard
+// drink water
+
 import UIKit
 
 class BoredAppViewController: UIViewController {
@@ -46,12 +51,12 @@ class BoredAppViewController: UIViewController {
         startLoading()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        let activity = parametersVC.activity ?? "???"
-        let activityColor = parametersVC.activityColor ?? UIColor(rgb: 0x828282)
-        
-        cardView.categorieTypeLabel.configure(withText: activity, backgroundColor: activityColor)
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        let activity = parametersVC.activity ?? "0"
+//        let activityColor = parametersVC.activityColor ?? UIColor(rgb: 0x828282)
+//
+//        cardView.categorieTypeLabel.configure(withText: activity, backgroundColor: activityColor)
+//    }
     
     private func setupAppearance() {
         view.backgroundColor = .white
@@ -78,7 +83,7 @@ class BoredAppViewController: UIViewController {
     }
     
     @objc private func settingsTapped() {
-        print("settings tapped")
+//        print("settings tapped")
         
 //        parametersVC.modalPresentationStyle = .fullScreen
 //        parametersVC.boredAppVC = self
@@ -111,11 +116,20 @@ class BoredAppViewController: UIViewController {
     }
     
     @objc private func againButtonTapped() {
-        print("againButton tapped")
+//        print("againButton tapped")
         
-        print("!!! Activity: \(parametersVC.activity) !!!")
-        print("!!! Paricipants: \(parametersVC.participants) !!!")
-        print("!!! Price: \(parametersVC.price) !!!")
+        let userActivityChoice = UserActivityChoice(
+            type: parametersVC.activity?.lowercased(),
+            participants: parametersVC.participants,
+            price: parametersVC.price)
+        
+        print("-------------------------------------------")
+        print("!!! USER TYPE: \(userActivityChoice.type ?? "nil")")
+        print("!!! USER PARTICIPANTS: \(String(describing: userActivityChoice.participants))")
+        print("!!! USER PRICE: \(userActivityChoice.price)")
+        
+        startLoading(params: userActivityChoice)
+        
         
     }
     
@@ -134,10 +148,30 @@ class BoredAppViewController: UIViewController {
         ])
     }
     
-    private func startLoading() {
-        self.services.loadActivity(
+    private func startLoading(params: UserActivityChoice? = nil) {
+        
+        self.services.loadActivity(withParams: params) { [weak self] activity, error in
+            DispatchQueue.main.async {
+                
+                if let _ = error {
+                    let alert = UIAlertController(title: "not found", message: " 😔 pls change condition ...", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self?.present(alert, animated: true, completion: nil)
+                    
+                    return
+                }
+                
+                if let data = activity {
+                    self?.cardView.activityLabel.text = data.activity
+                    self?.cardView.categorieTypeLabel.text = data.type
+                    self?.cardView.participantsNumberLabel.text = "\(data.participants)"
+                    self?.cardView.priceValueLabel.text = data.price == 0.0 ? "free" : "\(data.price)"
+                    self?.cardView.categorieTypeLabel.backgroundColor = self?.parametersVC.activityColor ?? UIColor(withRandomColor: ())
+                }
+            }
+        }
+        
     }
-
 
 }
 

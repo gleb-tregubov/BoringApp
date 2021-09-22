@@ -37,20 +37,40 @@ extension ParametersViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        
+        let cell = collectionView.cellForItem(at: indexPath)!
+        
+        if cell.isSelected {
+            collectionView.deselectItem(at: indexPath, animated: true)
+            self.activity = nil
+            self.activityColor = nil
+            return false
+        }
+        
         return true
     }
     
+//    func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! CategoryTypeCollectionViewCell
+        
         
         let cellActivity = cell.label.text
         
         let cellColor = cell.label.backgroundColor
         
-        self.activity = cellActivity ?? ""
-        self.activityColor = cellColor ?? UIColor(rgb: 0x828282)
+        self.activity = cellActivity
+        self.activityColor = cellColor// ?? UIColor(rgb: 0x828282)
         
     }
+    
+//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+//        self.activity = nil
+//        self.activityColor = nil
+//    }
     
 }
 

@@ -31,6 +31,8 @@
 		53DA767126FB754D00F199BE /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DA767026FB754D00F199BE /* Services.swift */; };
 		53DA767426FB77D200F199BE /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DA767326FB77D200F199BE /* ActivityModel.swift */; };
 		53DA767626FB78BE00F199BE /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DA767526FB78BE00F199BE /* JSONParser.swift */; };
+		53DA767826FBA0D300F199BE /* UserActivityChoiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DA767726FBA0D300F199BE /* UserActivityChoiceModel.swift */; };
+		53DA767A26FBC76500F199BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DA767926FBC76500F199BE /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		53DA767026FB754D00F199BE /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		53DA767326FB77D200F199BE /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		53DA767526FB78BE00F199BE /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		53DA767726FBA0D300F199BE /* UserActivityChoiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityChoiceModel.swift; sourceTree = "<group>"; };
+		53DA767926FBC76500F199BE /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		536A93E826F974B000DB5D8D = {
 			isa = PBXGroup;
 			children = (
+				53DA767926FBC76500F199BE /* Main.storyboard */,
 				53D74EC126F98283003BCEFA /* Fonts */,
 				536A93F326F974B000DB5D8D /* BoredApp */,
 				536A940A26F974B200DB5D8D /* BoredAppTests */,
@@ -218,9 +223,9 @@
 		53D74ED426FA1487003BCEFA /* Parameters */ = {
 			isa = PBXGroup;
 			children = (
+				53D74ED526FA14E3003BCEFA /* ParametersViewController.swift */,
 				53DA766C26FB18F800F199BE /* CategoryType CollectionView Cells */,
 				53DA766B26FB18AE00F199BE /* Parameters TableView Cells */,
-				53D74ED526FA14E3003BCEFA /* ParametersViewController.swift */,
 				53DA766A26FB188B00F199BE /* Extensions */,
 			);
 			path = Parameters;
@@ -276,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				53DA767326FB77D200F199BE /* ActivityModel.swift */,
+				53DA767726FBA0D300F199BE /* UserActivityChoiceModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				536A940126F974B200DB5D8D /* LaunchScreen.storyboard in Resources */,
+				53DA767A26FBC76500F199BE /* Main.storyboard in Resources */,
 				536A93FE26F974B200DB5D8D /* Assets.xcassets in Resources */,
 				53D74ECE26F9ACFF003BCEFA /* Nunito-Bold.ttf in Resources */,
 				53D74EC526F983E3003BCEFA /* Nunito-ExtraBold.ttf in Resources */,
@@ -420,6 +427,7 @@
 				53D74ED326F9F8F5003BCEFA /* Helpers.swift in Sources */,
 				53D74EDA26FA1FDA003BCEFA /* ParametersViewController + Table View Delegate.swift in Sources */,
 				53D74ECC26F9970D003BCEFA /* CardView.swift in Sources */,
+				53DA767826FBA0D300F199BE /* UserActivityChoiceModel.swift in Sources */,
 				53D74ED026F9BA25003BCEFA /* CategorieTypeLabel.swift in Sources */,
 				53D74ED626FA14E3003BCEFA /* ParametersViewController.swift in Sources */,
 				53DA767426FB77D200F199BE /* ActivityModel.swift in Sources */,
@@ -606,7 +614,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.glebtregubov.BoredApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -625,7 +633,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.glebtregubov.BoredApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

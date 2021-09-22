@@ -49,6 +49,7 @@ extension ParametersViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: ParticipantsTextFieldSettingsTableViewCell.reuseIdentifier) as! ParticipantsTextFieldSettingsTableViewCell
             
             cell.participantsTextField.delegate = self
+            cell.participantsTextField.addTarget(self, action: #selector(participantsTextFieldEditingChanged), for: .editingChanged)
             
             cell.selectionStyle = .none
             

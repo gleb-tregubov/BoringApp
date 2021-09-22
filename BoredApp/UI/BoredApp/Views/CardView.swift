@@ -13,7 +13,9 @@ class CardView: UIView {
     
     let priceValue = 0
     
-    let categorieTypeLabel = CategorieTypeLabel(withText: "Smth other...      ", backgroundColor: .gray)
+//    let colors = [0xEB5757, 0xF2994A, 0xF2C94C, 0x219653, 0x2F80ED]
+    
+    let categorieTypeLabel = CategorieTypeLabel(withText: "          ", backgroundColor: UIColor.white)
     
     let activityLabel: UILabel = {
         let view = UILabel()
@@ -22,7 +24,7 @@ class CardView: UIView {
         view.textAlignment = .left
         view.font = UIFont(name: "Nunito-Bold", size: 50.0)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Do something you used to do as a kid"
+//        view.text = "Do something you used to do as a kid"
         view.sizeToFit()
         
         return view
@@ -114,7 +116,8 @@ class CardView: UIView {
         NSLayoutConstraint.activate([
             activityLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 23.0),
             activityLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -23.0),
-            activityLabel.topAnchor.constraint(equalTo: categorieTypeLabel.bottomAnchor, constant: 30.0)
+            activityLabel.topAnchor.constraint(equalTo: categorieTypeLabel.bottomAnchor, constant: 10.0),
+            activityLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -70.0)
         ])
     }
     
@@ -124,6 +127,7 @@ class CardView: UIView {
         NSLayoutConstraint.activate([
             categorieTypeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             categorieTypeLabel.topAnchor.constraint(equalTo: self.topAnchor),
+            categorieTypeLabel.heightAnchor.constraint(equalToConstant: 40.0)
         ])
     }
     
@@ -143,7 +147,7 @@ class CardView: UIView {
         addSubview(priceStackView)
         
         priceStackView.addArrangedSubview(priceValueLabel)
-        priceValueLabel.text = priceValue == 0 ? "free" : "\(priceValue)"
+//        priceValueLabel.text = priceValue == 0 ? "free" : "\(priceValue)"
         
         NSLayoutConstraint.activate([
             priceStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -23),

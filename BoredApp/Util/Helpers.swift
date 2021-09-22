@@ -25,6 +25,10 @@ extension UIColor {
         )
     }
     
+    convenience init(withRandomColor: Void) {
+        self.init(rgb: [0xEB5757, 0xF2994A, 0xF2C94C, 0x219653, 0x2F80ED].randomElement()!)
+    }
+    
 }
 
 extension UIView {

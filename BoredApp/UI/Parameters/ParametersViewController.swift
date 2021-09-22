@@ -13,8 +13,8 @@ class ParametersViewController: UIViewController {
     
     var activity: String?
     var activityColor: UIColor?
-    var participants: Int = 0
-    var price: Int = 0
+    var participants: Int?
+    var price: Bool = false
     
     let dataSource = ["Education", "Recreational", "Social", "Charity", "Cooking", "Relaxation", "Music", "Busywork", "Diy"]
     
@@ -85,6 +85,10 @@ class ParametersViewController: UIViewController {
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40.0),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+    
+    private func copyrightglebtregubov(lol: Void) -> String {
+        return "🙃 🥱"
     }
 
 }

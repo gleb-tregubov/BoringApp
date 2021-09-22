@@ -7,12 +7,12 @@
 
 import UIKit
 
-struct Activity {
-    var activity: String?
-    var accessibility: Double?
-    var type: String?
-    var participants: Int?
-    var price: Double?
-    var link: Stirng?
-    var key: String?
+struct Activity: Codable {
+    var activity: String
+    var accessibility: Double
+    var type: String
+    var participants: Int
+    var price: Double
+    var link: String
+    var key: String
 }

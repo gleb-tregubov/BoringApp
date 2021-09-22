@@ -9,9 +9,14 @@ import UIKit
 
 extension ParametersViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        participants = Int(textField.text ?? "0") ?? 0
-        print(participants)
+//        participants = Int(textField.text ?? "0") ?? 0
+        participants = Int(textField.text ?? " ")
+//        print(participants)
         return textField.resignFirstResponder()
+    }
+    
+    @objc func participantsTextFieldEditingChanged(_ textField: UITextField) {
+        participants = Int(textField.text ?? " ")
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -29,8 +34,8 @@ extension ParametersViewController: UITextFieldDelegate {
     @objc private func hide() {
         let cell = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as! ParticipantsTextFieldSettingsTableViewCell
         
-        participants = Int(cell.participantsTextField.text ?? "0") ?? 0
-        print(participants)
+        
+        participants = Int(cell.participantsTextField.text ?? " ")
         view.endEditing(true)
     }
 }
@@ -38,8 +43,7 @@ extension ParametersViewController: UITextFieldDelegate {
 extension ParametersViewController {
     
     @objc func switchValueChanged(_ toggle: UISwitch) {
-        price = toggle.isOn ? 1 : 0
-        print(price)
+        price = toggle.isOn
     }
     
 }
