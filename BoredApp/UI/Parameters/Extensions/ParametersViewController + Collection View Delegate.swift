@@ -40,9 +40,14 @@ extension ParametersViewController: UICollectionViewDelegate {
         return true
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! CategoryTypeCollectionViewCell
+        
+        let cellActivity = cell.label.text
+        
+        self.activity = cellActivity ?? ""
+        
+    }
     
 }
 

@@ -88,10 +88,21 @@ class BoredAppViewController: UIViewController {
     private func setupAgainButton() {
         scrollView.addSubview(againButton)
         
+        againButton.addTarget(self, action: #selector(againButtonTapped), for: .touchUpInside)
+        
         NSLayoutConstraint.activate([
             againButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 60.0),
             againButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
         ])
+        
+    }
+    
+    @objc private func againButtonTapped() {
+        print("againButton tapped")
+        
+        print("!!! Activity: \(parametersVC.activity) !!!")
+        print("!!! Paricipants: \(parametersVC.participants) !!!")
+        print("!!! Price: \(parametersVC.price) !!!")
         
     }
     
