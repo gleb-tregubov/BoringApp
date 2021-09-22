@@ -11,7 +11,7 @@ class CategoriesTypesTableViewCell: UITableViewCell {
     
     static let reuseIdentifier = "CategorieTypeCellId"
     
-    let dataSource = ["Education", "Recreational", "Social", "Charity", "Cooking", "Relaxation", "Music", "Busywork", "Diy"]
+    var parametersViewController: ParametersViewController?
     
     let titleLable: UILabel = {
         let view = UILabel()
@@ -75,8 +75,8 @@ class CategoriesTypesTableViewCell: UITableViewCell {
     private func setupCategoryTypeCollectionViewCell() {
         contentView.addSubview(categoryTypeCollectionView)
         
-        categoryTypeCollectionView.delegate = self
-        categoryTypeCollectionView.dataSource = self
+//        categoryTypeCollectionView.delegate = self.parametersViewController
+//        categoryTypeCollectionView.dataSource = self.parametersViewController
         
         NSLayoutConstraint.activate([
             categoryTypeCollectionView.topAnchor.constraint(equalTo: titleLable.bottomAnchor, constant: 18.0),

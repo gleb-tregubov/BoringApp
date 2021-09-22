@@ -25,7 +25,6 @@ class CategoryTypeCollectionViewCell: UICollectionViewCell {
     
     private func setupAppearance() {
         setupLabel()
-//        contentView.backgroundColor = .orange
     }
     
     private func setupLabel() {
@@ -47,14 +46,9 @@ class CategoryTypeCollectionViewCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
             if isSelected {
-//                contentView.layer.borderWidth = 5.0
-//                contentView.layer.borderColor = UIColor.black.cgColor
-//                label.text = "123"
-                label.layer.borderWidth = 3.0
+                label.layer.borderWidth = 5.0
                 label.layer.borderColor = UIColor.black.cgColor
             } else {
-//                label.layer.borderWidth = 0.0
-//                label.layer.borderColor = nil
                 label.layer.borderWidth = 0.0
                 label.layer.borderColor = nil
             }
@@ -64,16 +58,11 @@ class CategoryTypeCollectionViewCell: UICollectionViewCell {
     override var isHighlighted: Bool {
         didSet {
             if isHighlighted {
-//                contentView.layer.borderWidth = 2.0
-//                contentView.layer.borderColor = UIColor.cyan.cgColor
-//                label.text = "123"
                 label.layer.borderWidth = 5.0
                 label.layer.borderColor = UIColor.lightGray.cgColor
             } else {
                 label.layer.borderWidth = 0.0
                 label.layer.borderColor = nil
-//                contentView.layer.borderWidth = 0
-//                contentView.layer.borderColor = nil
             }
         }
     }

@@ -36,6 +36,11 @@ extension ParametersViewController: UITableViewDataSource {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: CategoriesTypesTableViewCell.reuseIdentifier) as! CategoriesTypesTableViewCell
             
+            cell.parametersViewController = self
+            
+            cell.categoryTypeCollectionView.delegate = self
+            cell.categoryTypeCollectionView.dataSource = self
+            
             cell.selectionStyle = .none
             
             return cell

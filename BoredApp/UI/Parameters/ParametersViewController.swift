@@ -13,6 +13,8 @@ class ParametersViewController: UIViewController {
     var participants: Int = 0
     var price: Int = 0
     
+    let dataSource = ["Education", "Recreational", "Social", "Charity", "Cooking", "Relaxation", "Music", "Busywork", "Diy"]
+    
     let dismissButton: UIButton = {
         let view = UIButton()
         

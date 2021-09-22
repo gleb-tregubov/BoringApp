@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension CategoriesTypesTableViewCell: UICollectionViewDelegateFlowLayout {
+extension ParametersViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let insets = UIEdgeInsets(top: 0.0, left: 15.0, bottom: 0.0, right: 15.0)
@@ -30,19 +30,23 @@ extension CategoriesTypesTableViewCell: UICollectionViewDelegateFlowLayout {
     
 }
 
-extension CategoriesTypesTableViewCell: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
+extension ParametersViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
         return true
     }
     
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        
+//    }
+    
 }
 
-extension CategoriesTypesTableViewCell: UICollectionViewDataSource {
+extension ParametersViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.dataSource.count
     }
@@ -57,7 +61,6 @@ extension CategoriesTypesTableViewCell: UICollectionViewDataSource {
         let color: UIColor = UIColor(rgb: colors.randomElement() ?? 0x22EB5757)
         
         cell.configureCell(withActivity: activity, Color: color)
-//        cell.label.text = self.dataSource[indexPath.row]
         
         return cell
     }
