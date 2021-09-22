@@ -8,21 +8,25 @@
 import UIKit
 
 extension ParametersViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 90.0
+            return 240.0
         case 1:
+            return 90.0
+        case 2:
             return 60.0
         default:
             return 40.0
         }
     }
+    
 }
 
 extension ParametersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,19 +34,34 @@ extension ParametersViewController: UITableViewDataSource {
         
         switch indexPath.row {
         case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: CategoriesTypesTableViewCell.reuseIdentifier) as! CategoriesTypesTableViewCell
+            
+            cell.selectionStyle = .none
+            
+            return cell
+        case 1:
             
             let cell = tableView.dequeueReusableCell(withIdentifier: ParticipantsTextFieldSettingsTableViewCell.reuseIdentifier) as! ParticipantsTextFieldSettingsTableViewCell
             
+            cell.selectionStyle = .none
+            
             return cell
             
-        case 1:
+        case 2:
             
             let cell = tableView.dequeueReusableCell(withIdentifier: PriceToggleSettingsTableViewCell.reuseIdentifier) as! PriceToggleSettingsTableViewCell
             
+            cell.selectionStyle = .none
+            
             return cell
             
-        default: 
-            return UITableViewCell()
+        default:
+            
+            let cell = UITableViewCell()
+            
+            cell.selectionStyle = .none
+            
+            return cell
         }
         
     }

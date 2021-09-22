@@ -26,7 +26,7 @@ class ParametersViewController: UIViewController {
         
         view.register(PriceToggleSettingsTableViewCell.self, forCellReuseIdentifier: PriceToggleSettingsTableViewCell.reuseIdentifier)
         view.register(ParticipantsTextFieldSettingsTableViewCell.self, forCellReuseIdentifier: ParticipantsTextFieldSettingsTableViewCell.reuseIdentifier)
-//        view.register(<#T##cellClass: AnyClass?##AnyClass?#>, forCellReuseIdentifier: <#T##String#>)
+        view.register(CategoriesTypesTableViewCell.self, forCellReuseIdentifier: CategoriesTypesTableViewCell.reuseIdentifier)
         
         view.isScrollEnabled = false
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -73,7 +73,7 @@ class ParametersViewController: UIViewController {
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 110.0),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80.0),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
