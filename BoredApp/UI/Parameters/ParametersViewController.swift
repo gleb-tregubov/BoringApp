@@ -9,6 +9,10 @@ import UIKit
 
 class ParametersViewController: UIViewController {
     
+    var activity: String?
+    var participants: Int = 0
+    var price: Int = 0
+    
     let dismissButton: UIButton = {
         let view = UIButton()
         
@@ -73,7 +77,7 @@ class ParametersViewController: UIViewController {
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80.0),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40.0),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }

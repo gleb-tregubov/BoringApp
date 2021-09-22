@@ -32,6 +32,14 @@ extension CategoriesTypesTableViewCell: UICollectionViewDelegateFlowLayout {
 
 extension CategoriesTypesTableViewCell: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
 }
 
 extension CategoriesTypesTableViewCell: UICollectionViewDataSource {

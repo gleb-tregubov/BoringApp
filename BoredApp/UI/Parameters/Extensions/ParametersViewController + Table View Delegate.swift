@@ -43,6 +43,8 @@ extension ParametersViewController: UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: ParticipantsTextFieldSettingsTableViewCell.reuseIdentifier) as! ParticipantsTextFieldSettingsTableViewCell
             
+            cell.participantsTextField.delegate = self
+            
             cell.selectionStyle = .none
             
             return cell
@@ -51,6 +53,7 @@ extension ParametersViewController: UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: PriceToggleSettingsTableViewCell.reuseIdentifier) as! PriceToggleSettingsTableViewCell
             
+            cell.priceToggleSwitch.addTarget(self, action: #selector(switchValueChanged), for: .valueChanged)
             cell.selectionStyle = .none
             
             return cell

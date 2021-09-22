@@ -40,6 +40,7 @@ class ParticipantsTextFieldSettingsTableViewCell: UITableViewCell {
         view.textColor = UIColor(rgb: 0x3C3C43)
         view.font = UIFont(name: "Nunito-ExtraBold", size: 17.0)
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.keyboardType = .numberPad
         
         return view
     }()
