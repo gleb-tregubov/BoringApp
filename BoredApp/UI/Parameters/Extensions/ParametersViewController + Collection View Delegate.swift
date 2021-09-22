@@ -45,7 +45,10 @@ extension ParametersViewController: UICollectionViewDelegate {
         
         let cellActivity = cell.label.text
         
+        let cellColor = cell.label.backgroundColor
+        
         self.activity = cellActivity ?? ""
+        self.activityColor = cellColor ?? UIColor(rgb: 0x828282)
         
     }
     

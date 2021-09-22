@@ -60,5 +60,10 @@ class CategorieTypeLabel: UILabel {
         
         sizeToFit()
     }
+    
+    func configure(withText text: String, backgroundColor color: UIColor) {
+        self.text = text
+        self.backgroundColor = color
+    }
 
 }

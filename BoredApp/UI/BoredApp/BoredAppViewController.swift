@@ -9,6 +9,8 @@ import UIKit
 
 class BoredAppViewController: UIViewController {
     
+    let services = Services()
+    
     let parametersVC = ParametersViewController()
     
     private let scrollView: UIScrollView = {
@@ -41,6 +43,14 @@ class BoredAppViewController: UIViewController {
         super.viewDidLoad()
         
         setupAppearance()
+        startLoading()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let activity = parametersVC.activity ?? "???"
+        let activityColor = parametersVC.activityColor ?? UIColor(rgb: 0x828282)
+        
+        cardView.categorieTypeLabel.configure(withText: activity, backgroundColor: activityColor)
     }
     
     private func setupAppearance() {
@@ -70,7 +80,10 @@ class BoredAppViewController: UIViewController {
     @objc private func settingsTapped() {
         print("settings tapped")
         
-        navigationController?.present(parametersVC, animated: true, completion: nil)
+//        parametersVC.modalPresentationStyle = .fullScreen
+//        parametersVC.boredAppVC = self
+        self.present(parametersVC, animated: true, completion: nil)
+
         
     }
     
@@ -119,6 +132,10 @@ class BoredAppViewController: UIViewController {
             cardView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 20.0),
             cardView.bottomAnchor.constraint(equalTo: againButton.topAnchor, constant: -48.0)
         ])
+    }
+    
+    private func startLoading() {
+        self.services.loadActivity(
     }
 
 

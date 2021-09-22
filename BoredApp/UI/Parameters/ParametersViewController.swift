@@ -9,7 +9,10 @@ import UIKit
 
 class ParametersViewController: UIViewController {
     
+//    weak var boredAppVC: BoredAppViewController?
+    
     var activity: String?
+    var activityColor: UIColor?
     var participants: Int = 0
     var price: Int = 0
     
