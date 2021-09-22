@@ -9,12 +9,21 @@
 /* Begin PBXBuildFile section */
 		536A93F526F974B000DB5D8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A93F426F974B000DB5D8D /* AppDelegate.swift */; };
 		536A93F726F974B000DB5D8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A93F626F974B000DB5D8D /* SceneDelegate.swift */; };
-		536A93F926F974B000DB5D8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A93F826F974B000DB5D8D /* ViewController.swift */; };
-		536A93FC26F974B000DB5D8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 536A93FA26F974B000DB5D8D /* Main.storyboard */; };
+		536A93F926F974B000DB5D8D /* BoredAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A93F826F974B000DB5D8D /* BoredAppViewController.swift */; };
 		536A93FE26F974B200DB5D8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 536A93FD26F974B200DB5D8D /* Assets.xcassets */; };
 		536A940126F974B200DB5D8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 536A93FF26F974B200DB5D8D /* LaunchScreen.storyboard */; };
 		536A940C26F974B200DB5D8D /* BoredAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A940B26F974B200DB5D8D /* BoredAppTests.swift */; };
 		536A941726F974B200DB5D8D /* BoredAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A941626F974B200DB5D8D /* BoredAppUITests.swift */; };
+		53D74EC026F981C5003BCEFA /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D74EBF26F981C5003BCEFA /* NavigationViewController.swift */; };
+		53D74EC526F983E3003BCEFA /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53D74EC426F983E3003BCEFA /* Nunito-ExtraBold.ttf */; };
+		53D74ECC26F9970D003BCEFA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D74ECB26F9970D003BCEFA /* CardView.swift */; };
+		53D74ECE26F9ACFF003BCEFA /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53D74ECD26F9ACFF003BCEFA /* Nunito-Bold.ttf */; };
+		53D74ED026F9BA25003BCEFA /* CategorieTypeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D74ECF26F9BA25003BCEFA /* CategorieTypeLabel.swift */; };
+		53D74ED326F9F8F5003BCEFA /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D74ED226F9F8F5003BCEFA /* Helpers.swift */; };
+		53D74ED626FA14E3003BCEFA /* ParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D74ED526FA14E3003BCEFA /* ParametersViewController.swift */; };
+		53D74ED826FA1F8F003BCEFA /* PriceToggleSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D74ED726FA1F8F003BCEFA /* PriceToggleSettingsTableViewCell.swift */; };
+		53D74EDA26FA1FDA003BCEFA /* ParametersViewController + Table View Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D74ED926FA1FDA003BCEFA /* ParametersViewController + Table View Delegate.swift */; };
+		53D74EDC26FA2729003BCEFA /* ParticipantsTextFieldSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D74EDB26FA2729003BCEFA /* ParticipantsTextFieldSettingsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +47,7 @@
 		536A93F126F974B000DB5D8D /* BoredApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoredApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		536A93F426F974B000DB5D8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		536A93F626F974B000DB5D8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		536A93F826F974B000DB5D8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		536A93FB26F974B000DB5D8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		536A93F826F974B000DB5D8D /* BoredAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredAppViewController.swift; sourceTree = "<group>"; };
 		536A93FD26F974B200DB5D8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		536A940026F974B200DB5D8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		536A940226F974B200DB5D8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +57,16 @@
 		536A941226F974B200DB5D8D /* BoredAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoredAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		536A941626F974B200DB5D8D /* BoredAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredAppUITests.swift; sourceTree = "<group>"; };
 		536A941826F974B200DB5D8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53D74EBF26F981C5003BCEFA /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		53D74EC426F983E3003BCEFA /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		53D74ECB26F9970D003BCEFA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		53D74ECD26F9ACFF003BCEFA /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		53D74ECF26F9BA25003BCEFA /* CategorieTypeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieTypeLabel.swift; sourceTree = "<group>"; };
+		53D74ED226F9F8F5003BCEFA /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		53D74ED526FA14E3003BCEFA /* ParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersViewController.swift; sourceTree = "<group>"; };
+		53D74ED726FA1F8F003BCEFA /* PriceToggleSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceToggleSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		53D74ED926FA1FDA003BCEFA /* ParametersViewController + Table View Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParametersViewController + Table View Delegate.swift"; sourceTree = "<group>"; };
+		53D74EDB26FA2729003BCEFA /* ParticipantsTextFieldSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsTextFieldSettingsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +97,7 @@
 		536A93E826F974B000DB5D8D = {
 			isa = PBXGroup;
 			children = (
+				53D74EC126F98283003BCEFA /* Fonts */,
 				536A93F326F974B000DB5D8D /* BoredApp */,
 				536A940A26F974B200DB5D8D /* BoredAppTests */,
 				536A941526F974B200DB5D8D /* BoredAppUITests */,
@@ -99,12 +118,9 @@
 		536A93F326F974B000DB5D8D /* BoredApp */ = {
 			isa = PBXGroup;
 			children = (
-				536A93F426F974B000DB5D8D /* AppDelegate.swift */,
-				536A93F626F974B000DB5D8D /* SceneDelegate.swift */,
-				536A93F826F974B000DB5D8D /* ViewController.swift */,
-				536A93FA26F974B000DB5D8D /* Main.storyboard */,
-				536A93FD26F974B200DB5D8D /* Assets.xcassets */,
-				536A93FF26F974B200DB5D8D /* LaunchScreen.storyboard */,
+				53D74EC826F989F6003BCEFA /* UI */,
+				53D74EC626F989D1003BCEFA /* System */,
+				53D74ED126F9F8C6003BCEFA /* Util */,
 				536A940226F974B200DB5D8D /* Info.plist */,
 			);
 			path = BoredApp;
@@ -126,6 +142,81 @@
 				536A941826F974B200DB5D8D /* Info.plist */,
 			);
 			path = BoredAppUITests;
+			sourceTree = "<group>";
+		};
+		53D74EC126F98283003BCEFA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				53D74ECD26F9ACFF003BCEFA /* Nunito-Bold.ttf */,
+				53D74EC426F983E3003BCEFA /* Nunito-ExtraBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		53D74EC626F989D1003BCEFA /* System */ = {
+			isa = PBXGroup;
+			children = (
+				536A93F426F974B000DB5D8D /* AppDelegate.swift */,
+				536A93F626F974B000DB5D8D /* SceneDelegate.swift */,
+				536A93FD26F974B200DB5D8D /* Assets.xcassets */,
+				536A93FF26F974B200DB5D8D /* LaunchScreen.storyboard */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		53D74EC726F989E4003BCEFA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				53D74EBF26F981C5003BCEFA /* NavigationViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		53D74EC826F989F6003BCEFA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				53D74EC726F989E4003BCEFA /* Controllers */,
+				53D74ECA26F98BAB003BCEFA /* Views */,
+				53D74EC926F98A18003BCEFA /* BoredApp */,
+				53D74ED426FA1487003BCEFA /* Parameters */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		53D74EC926F98A18003BCEFA /* BoredApp */ = {
+			isa = PBXGroup;
+			children = (
+				536A93F826F974B000DB5D8D /* BoredAppViewController.swift */,
+			);
+			path = BoredApp;
+			sourceTree = "<group>";
+		};
+		53D74ECA26F98BAB003BCEFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				53D74ECB26F9970D003BCEFA /* CardView.swift */,
+				53D74ECF26F9BA25003BCEFA /* CategorieTypeLabel.swift */,
+				53D74ED726FA1F8F003BCEFA /* PriceToggleSettingsTableViewCell.swift */,
+				53D74EDB26FA2729003BCEFA /* ParticipantsTextFieldSettingsTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		53D74ED126F9F8C6003BCEFA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				53D74ED226F9F8F5003BCEFA /* Helpers.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		53D74ED426FA1487003BCEFA /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				53D74ED526FA14E3003BCEFA /* ParametersViewController.swift */,
+				53D74ED926FA1FDA003BCEFA /* ParametersViewController + Table View Delegate.swift */,
+			);
+			path = Parameters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +324,8 @@
 			files = (
 				536A940126F974B200DB5D8D /* LaunchScreen.storyboard in Resources */,
 				536A93FE26F974B200DB5D8D /* Assets.xcassets in Resources */,
-				536A93FC26F974B000DB5D8D /* Main.storyboard in Resources */,
+				53D74ECE26F9ACFF003BCEFA /* Nunito-Bold.ttf in Resources */,
+				53D74EC526F983E3003BCEFA /* Nunito-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +350,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				536A93F926F974B000DB5D8D /* ViewController.swift in Sources */,
+				53D74EC026F981C5003BCEFA /* NavigationViewController.swift in Sources */,
+				53D74ED826FA1F8F003BCEFA /* PriceToggleSettingsTableViewCell.swift in Sources */,
+				53D74ED326F9F8F5003BCEFA /* Helpers.swift in Sources */,
+				53D74EDA26FA1FDA003BCEFA /* ParametersViewController + Table View Delegate.swift in Sources */,
+				53D74ECC26F9970D003BCEFA /* CardView.swift in Sources */,
+				53D74ED026F9BA25003BCEFA /* CategorieTypeLabel.swift in Sources */,
+				53D74ED626FA14E3003BCEFA /* ParametersViewController.swift in Sources */,
+				536A93F926F974B000DB5D8D /* BoredAppViewController.swift in Sources */,
 				536A93F526F974B000DB5D8D /* AppDelegate.swift in Sources */,
 				536A93F726F974B000DB5D8D /* SceneDelegate.swift in Sources */,
+				53D74EDC26FA2729003BCEFA /* ParticipantsTextFieldSettingsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +396,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		536A93FA26F974B000DB5D8D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				536A93FB26F974B000DB5D8D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		536A93FF26F974B200DB5D8D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
