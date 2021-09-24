@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6D14B296-DF5F-452B-89FA-4642D253D7BE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D19513E6-74FF-4E51-B4F1-97141AE63B63"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/UI/Parameters/CategorieTypeTableViewCell + Collection View Delegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C229F39-565D-4E30-9858-1CB308123138"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/UI/Views/CategoriesTypesTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "categoryTypeCollectionView"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "3C229F39-565D-4E30-9858-1CB308123138 - 55afca35d02fd117"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoredApp.CategoriesTypesTableViewCell.categoryTypeCollectionView.getter : __C.UICollectionView"
+                  moduleName = "BoredApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glebtregubov/Desktop/XCode%20Projects/BoredApp/BoredApp/UI/Views/CategoriesTypesTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  uuid = "3C229F39-565D-4E30-9858-1CB308123138 - a15c3f1f2c90a9ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UICollectionView in BoredApp.CategoriesTypesTableViewCell.categoryTypeCollectionView.getter : __C.UICollectionView"
+                  moduleName = "BoredApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glebtregubov/Desktop/XCode%20Projects/BoredApp/BoredApp/UI/Views/CategoriesTypesTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "33">
+               </Location>
+               <Location
+                  uuid = "3C229F39-565D-4E30-9858-1CB308123138 - e51861d7268811b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoredApp.CategoriesTypesTableViewCell.categoryTypeCollectionView.setter : __C.UICollectionView"
+                  moduleName = "BoredApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glebtregubov/Desktop/XCode%20Projects/BoredApp/BoredApp/UI/Views/CategoriesTypesTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "3C229F39-565D-4E30-9858-1CB308123138 - 2cf6c3081b8b1993"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoredApp.CategoriesTypesTableViewCell.categoryTypeCollectionView.modify : __C.UICollectionView"
+                  moduleName = "BoredApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glebtregubov/Desktop/XCode%20Projects/BoredApp/BoredApp/UI/Views/CategoriesTypesTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "3C229F39-565D-4E30-9858-1CB308123138 - 4ccbcec003dc9746"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoredApp.CategoriesTypesTableViewCell.categoryTypeCollectionView.modify : __C.UICollectionView with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "BoredApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glebtregubov/Desktop/XCode%20Projects/BoredApp/BoredApp/UI/Views/CategoriesTypesTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FB0DBA4-0007-47A2-8B1A-9BA5F3D60139"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/UI/Views/CategoriesTypesTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "init(style:reuseIdentifier:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9FB0DBA4-0007-47A2-8B1A-9BA5F3D60139 - a183e5fe7757c4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoredApp.CategoriesTypesTableViewCell.__allocating_init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; BoredApp.CategoriesTypesTableViewCell"
+                  moduleName = "BoredApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glebtregubov/Desktop/XCode%20Projects/BoredApp/BoredApp/UI/Views/CategoriesTypesTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "9FB0DBA4-0007-47A2-8B1A-9BA5F3D60139 - 1cfc984046dffe20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoredApp.CategoriesTypesTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; BoredApp.CategoriesTypesTableViewCell"
+                  moduleName = "BoredApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glebtregubov/Desktop/XCode%20Projects/BoredApp/BoredApp/UI/Views/CategoriesTypesTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "185">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC0EDD9A-0CCF-430D-86D4-460AB891AEAC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/UI/Views/CategoryTypeCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "init(frame:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EC0EDD9A-0CCF-430D-86D4-460AB891AEAC - 481999417ed6bffa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoredApp.CategoryTypeCollectionViewCell.__allocating_init(frame: __C.CGRect) -&gt; BoredApp.CategoryTypeCollectionViewCell"
+                  moduleName = "BoredApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glebtregubov/Desktop/XCode%20Projects/BoredApp/BoredApp/UI/Views/CategoryTypeCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "EC0EDD9A-0CCF-430D-86D4-460AB891AEAC - 46f12364abc6592a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoredApp.CategoryTypeCollectionViewCell.init(frame: __C.CGRect) -&gt; BoredApp.CategoryTypeCollectionViewCell"
+                  moduleName = "BoredApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glebtregubov/Desktop/XCode%20Projects/BoredApp/BoredApp/UI/Views/CategoryTypeCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "106">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC9E164F-4F59-4591-B063-DE2F8B89F910"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/UI/Parameters/Extensions/ParametersViewController + Responders Delegates.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "textFieldDidBeginEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DCB34BD0-45F7-423D-A64F-2A38084DA72E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/UI/Parameters/Extensions/ParametersViewController + Responders Delegates.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "textFieldDidEndEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E7365F6-CF0F-4ACB-9167-EEFFD8F69433"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/UI/Parameters/Extensions/ParametersViewController + Collection View Delegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69C495AF-A750-4B6F-8DF8-63EAC35BB75A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/UI/Parameters/Parameters TableView Cells/CategoriesTypesTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "setupCategoryTypeCollectionViewCell()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "950D70C7-FF99-485F-B306-4B4AD2BC087C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/UI/Parameters/Extensions/ParametersViewController + Table View Delegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B83064E5-ADD2-41F2-BAE9-BB5EB29EBF3F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/UI/BoredApp/BoredAppViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "BoredAppViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35C57806-7197-4ABD-ADEC-F8476ABAFEE0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/Services/Services.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "loadActivity(withParams:withCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "35C57806-7197-4ABD-ADEC-F8476ABAFEE0 - cc3cff95f8c96caf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 0 of BoredApp.Services.loadActivity(withParams: Swift.Optional&lt;BoredApp.UserActivityChoice&gt;, withCompletion: (BoredApp.Activity) -&gt; ()) -&gt; ()"
+                  moduleName = "BoredApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glebtregubov/Desktop/XCode%20Projects/BoredApp/BoredApp/Services/Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "35C57806-7197-4ABD-ADEC-F8476ABAFEE0 - dd10b526fb7ca876"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoredApp.Services.loadActivity(withParams: Swift.Optional&lt;BoredApp.UserActivityChoice&gt;, withCompletion: (BoredApp.Activity) -&gt; ()) -&gt; ()"
+                  moduleName = "BoredApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/glebtregubov/Desktop/XCode%20Projects/BoredApp/BoredApp/Services/Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "498">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB3BE901-24EA-404F-899C-D2A38682596B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/UI/Parameters/Extensions/ParametersViewController + Collection View Delegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "ParametersViewController"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "70A0BB85-2DAA-45C0-9213-485F623D8360"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/UI/Parameters/Extensions/ParametersViewController + Collection View Delegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "ParametersViewController"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B1D4785D-5FB1-4749-8C48-0D962029B4B6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/UI/Parameters/Extensions/ParametersViewController + Collection View Delegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "collectionView(_:shouldSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "070F0CAA-4308-4385-863A-9C1D45AC7B98"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoredApp/UI/Parameters/Extensions/ParametersViewController + Collection View Delegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
