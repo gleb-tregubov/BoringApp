@@ -11,6 +11,7 @@
 // drink water
 
 import UIKit
+import SPAlert
 
 class BoredAppViewController: UIViewController {
     
@@ -154,9 +155,8 @@ class BoredAppViewController: UIViewController {
             DispatchQueue.main.async {
                 
                 if let _ = error {
-                    let alert = UIAlertController(title: "not found", message: " 😔 pls change condition ...", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                    self?.present(alert, animated: true, completion: nil)
+                    
+                    SPAlert.present(title: "not found", message: "😔 pls change condition", preset: .custom(UIImage(systemName: "xmark") ?? .checkmark), haptic: .error, completion: nil)
                     
                     return
                 }

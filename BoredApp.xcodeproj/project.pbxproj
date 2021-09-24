@@ -33,6 +33,9 @@
 		53DA767626FB78BE00F199BE /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DA767526FB78BE00F199BE /* JSONParser.swift */; };
 		53DA767826FBA0D300F199BE /* UserActivityChoiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DA767726FBA0D300F199BE /* UserActivityChoiceModel.swift */; };
 		53DA767A26FBC76500F199BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DA767926FBC76500F199BE /* Main.storyboard */; };
+		5ACA2DBC1E27C8A87968BE60 /* Pods_BoredApp_BoredAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC9ABF4CBAE05239621004D /* Pods_BoredApp_BoredAppUITests.framework */; };
+		70AD00A491A007CE66F15C8C /* Pods_BoredApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E932F1674A2CCADA33535B0B /* Pods_BoredApp.framework */; };
+		DAF5151EF02E33B4C576F6AE /* Pods_BoredAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB2193A21594520DA8176A1 /* Pods_BoredAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E0216695F198FE13EEF2DE8 /* Pods-BoredApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoredApp.debug.xcconfig"; path = "Target Support Files/Pods-BoredApp/Pods-BoredApp.debug.xcconfig"; sourceTree = "<group>"; };
 		536A93F126F974B000DB5D8D /* BoredApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoredApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		536A93F426F974B000DB5D8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		536A93F626F974B000DB5D8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,14 @@
 		53DA767526FB78BE00F199BE /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		53DA767726FBA0D300F199BE /* UserActivityChoiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityChoiceModel.swift; sourceTree = "<group>"; };
 		53DA767926FBC76500F199BE /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5BC9ABF4CBAE05239621004D /* Pods_BoredApp_BoredAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoredApp_BoredAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70BC63B985428B02FBB714D5 /* Pods-BoredApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoredApp.release.xcconfig"; path = "Target Support Files/Pods-BoredApp/Pods-BoredApp.release.xcconfig"; sourceTree = "<group>"; };
+		7C664BF14454CE8AF3194FAC /* Pods-BoredAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoredAppTests.debug.xcconfig"; path = "Target Support Files/Pods-BoredAppTests/Pods-BoredAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B41EF6B9F33FD35FF3F15053 /* Pods-BoredAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoredAppTests.release.xcconfig"; path = "Target Support Files/Pods-BoredAppTests/Pods-BoredAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		BCB2193A21594520DA8176A1 /* Pods_BoredAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoredAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0E8157C356924B360AD6ABF /* Pods-BoredApp-BoredAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoredApp-BoredAppUITests.release.xcconfig"; path = "Target Support Files/Pods-BoredApp-BoredAppUITests/Pods-BoredApp-BoredAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E932F1674A2CCADA33535B0B /* Pods_BoredApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoredApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF5340BCCA2DC11134C2A919 /* Pods-BoredApp-BoredAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoredApp-BoredAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-BoredApp-BoredAppUITests/Pods-BoredApp-BoredAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70AD00A491A007CE66F15C8C /* Pods_BoredApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF5151EF02E33B4C576F6AE /* Pods_BoredAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACA2DBC1E27C8A87968BE60 /* Pods_BoredApp_BoredAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +136,8 @@
 				536A940A26F974B200DB5D8D /* BoredAppTests */,
 				536A941526F974B200DB5D8D /* BoredAppUITests */,
 				536A93F226F974B000DB5D8D /* Products */,
+				869A74B6DA5637695B912E5F /* Pods */,
+				FF7ACD16656784FED8B4B3F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -286,6 +303,30 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		869A74B6DA5637695B912E5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E0216695F198FE13EEF2DE8 /* Pods-BoredApp.debug.xcconfig */,
+				70BC63B985428B02FBB714D5 /* Pods-BoredApp.release.xcconfig */,
+				FF5340BCCA2DC11134C2A919 /* Pods-BoredApp-BoredAppUITests.debug.xcconfig */,
+				C0E8157C356924B360AD6ABF /* Pods-BoredApp-BoredAppUITests.release.xcconfig */,
+				7C664BF14454CE8AF3194FAC /* Pods-BoredAppTests.debug.xcconfig */,
+				B41EF6B9F33FD35FF3F15053 /* Pods-BoredAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF7ACD16656784FED8B4B3F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E932F1674A2CCADA33535B0B /* Pods_BoredApp.framework */,
+				5BC9ABF4CBAE05239621004D /* Pods_BoredApp_BoredAppUITests.framework */,
+				BCB2193A21594520DA8176A1 /* Pods_BoredAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,9 +334,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 536A941B26F974B200DB5D8D /* Build configuration list for PBXNativeTarget "BoredApp" */;
 			buildPhases = (
+				26D991266541994E52C592F9 /* [CP] Check Pods Manifest.lock */,
 				536A93ED26F974B000DB5D8D /* Sources */,
 				536A93EE26F974B000DB5D8D /* Frameworks */,
 				536A93EF26F974B000DB5D8D /* Resources */,
+				12F7B73214A3E0DEF46FAC09 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,6 +353,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 536A941E26F974B200DB5D8D /* Build configuration list for PBXNativeTarget "BoredAppTests" */;
 			buildPhases = (
+				BB1CFF2BECBF90A8930FC83E /* [CP] Check Pods Manifest.lock */,
 				536A940326F974B200DB5D8D /* Sources */,
 				536A940426F974B200DB5D8D /* Frameworks */,
 				536A940526F974B200DB5D8D /* Resources */,
@@ -328,9 +372,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 536A942126F974B200DB5D8D /* Build configuration list for PBXNativeTarget "BoredAppUITests" */;
 			buildPhases = (
+				558C4BA96F5664F65FC09998 /* [CP] Check Pods Manifest.lock */,
 				536A940E26F974B200DB5D8D /* Sources */,
 				536A940F26F974B200DB5D8D /* Frameworks */,
 				536A941026F974B200DB5D8D /* Resources */,
+				FCB80BBEDD353F86295DFDB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -412,6 +458,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12F7B73214A3E0DEF46FAC09 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoredApp/Pods-BoredApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoredApp/Pods-BoredApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BoredApp/Pods-BoredApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26D991266541994E52C592F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoredApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		558C4BA96F5664F65FC09998 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoredApp-BoredAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB1CFF2BECBF90A8930FC83E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoredAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCB80BBEDD353F86295DFDB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoredApp-BoredAppUITests/Pods-BoredApp-BoredAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoredApp-BoredAppUITests/Pods-BoredApp-BoredAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BoredApp-BoredAppUITests/Pods-BoredApp-BoredAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		536A93ED26F974B000DB5D8D /* Sources */ = {
@@ -601,6 +750,7 @@
 		};
 		536A941C26F974B200DB5D8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E0216695F198FE13EEF2DE8 /* Pods-BoredApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -620,6 +770,7 @@
 		};
 		536A941D26F974B200DB5D8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70BC63B985428B02FBB714D5 /* Pods-BoredApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -639,6 +790,7 @@
 		};
 		536A941F26F974B200DB5D8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C664BF14454CE8AF3194FAC /* Pods-BoredAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -661,6 +813,7 @@
 		};
 		536A942026F974B200DB5D8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B41EF6B9F33FD35FF3F15053 /* Pods-BoredAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -683,6 +836,7 @@
 		};
 		536A942226F974B200DB5D8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF5340BCCA2DC11134C2A919 /* Pods-BoredApp-BoredAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -703,6 +857,7 @@
 		};
 		536A942326F974B200DB5D8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0E8157C356924B360AD6ABF /* Pods-BoredApp-BoredAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
