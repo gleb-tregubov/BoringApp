@@ -7,7 +7,13 @@
 
 import UIKit
 
-struct UserActivityChoice {
+protocol UserActivityChoiceModelProtocol {
+    var type: String? { get }
+    var participants: Int? { get }
+    var price: Bool { get }
+}
+
+struct UserActivityChoice: UserActivityChoiceModelProtocol {
     let type: String?
     let participants: Int?
     let price: Bool

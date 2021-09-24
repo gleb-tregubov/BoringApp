@@ -7,12 +7,22 @@
 
 import UIKit
 
-struct Activity: Codable {
-    var activity: String
-    var accessibility: Double
-    var type: String
-    var participants: Int
-    var price: Double
-    var link: String
-    var key: String
+protocol ActivityModelProtocol {
+    var activity: String { get }
+    var accessibility: Double { get }
+    var type: String { get }
+    var participants: Int { get }
+    var price: Double { get }
+    var link: String { get }
+    var key: String { get }
+}
+
+struct Activity: ActivityModelProtocol, Codable {
+    let activity: String
+    let accessibility: Double
+    let type: String
+    let participants: Int
+    let price: Double
+    let link: String
+    let key: String
 }

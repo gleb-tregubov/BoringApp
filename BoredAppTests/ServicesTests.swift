@@ -10,7 +10,7 @@ import BoredApp
 
 class ServicesTests: XCTestCase {
     
-    var services: Services!
+    var services: ServicesProtocol!
 
     override func setUpWithError() throws {
         super.setUp()
@@ -25,7 +25,7 @@ class ServicesTests: XCTestCase {
     func testServices() throws {
         let expecation = XCTestExpectation(description: "servicesExpectation")
         
-        self.services.loadActivity { activity, error in
+        self.services.loadActivity(withParams: nil) { activity, error in
             
             if let _ = error {
                 XCTAssertNotNil(error)

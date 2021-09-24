@@ -7,7 +7,11 @@
 
 import UIKit
 
-struct Services {
+protocol ServicesProtocol {
+    func loadActivity(withParams params: UserActivityChoice?, withCompletion completion: @escaping (_ activity: Activity?, _ error: Error?) -> Void)
+}
+
+struct Services: ServicesProtocol {
     
     let session = URLSession.shared
     

@@ -15,7 +15,7 @@ import SPAlert
 
 class BoredAppViewController: UIViewController {
     
-    let services = Services()
+    let services: ServicesProtocol = Services()
     
     let parametersVC = ParametersViewController()
     

@@ -7,7 +7,11 @@
 
 import UIKit
 
-struct JSONParser {
+protocol ParserProtocol {
+    func parseActivity(data: Data, completion: (_ activity: Activity?, _ error: Error?) -> Void)
+}
+
+struct JSONParser: ParserProtocol {
     
     func parseActivity(data: Data, completion: (_ activity: Activity?, _ error: Error?) -> Void) {
         do {
