@@ -19,6 +19,10 @@ class BoredAppViewController: UIViewController {
     
     let parametersVC = ParametersViewController()
     
+    let savedActivitiesVC = SavedActivitiesViewController()
+    
+    var currentActivity: SavedActivityModel!
+    
     private let scrollView: UIScrollView = {
         
         let view = UIScrollView()
@@ -43,7 +47,32 @@ class BoredAppViewController: UIViewController {
         return view
     }()
     
-    private let cardView = CardView()
+    private let saveActivityButton: UIButton = {
+        let view = UIButton()
+        
+        let config = UIImage.SymbolConfiguration(pointSize: 50.0, weight: .black, scale: .large)
+        
+        view.setImage(UIImage(systemName: "rectangle.stack.badge.plus", withConfiguration: config), for: .normal)
+        
+        view.tintColor = .black
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
+    }()
+    
+    private let buttonsStackView: UIStackView = {
+        let view = UIStackView()
+        
+        view.axis = .horizontal
+        view.spacing = 150.0
+        view.backgroundColor = .clear
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
+    }()
+    
+    let cardView = CardView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,19 +81,13 @@ class BoredAppViewController: UIViewController {
         startLoading()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        let activity = parametersVC.activity ?? "0"
-//        let activityColor = parametersVC.activityColor ?? UIColor(rgb: 0x828282)
-//
-//        cardView.categorieTypeLabel.configure(withText: activity, backgroundColor: activityColor)
-//    }
     
     private func setupAppearance() {
         view.backgroundColor = .white
         
         setupNavigationBar()
         setupScrollView()
-        setupAgainButton()
+        setupButtonsStackView()
         setupCardView()
     }
     
@@ -81,16 +104,20 @@ class BoredAppViewController: UIViewController {
         settingsRightBarButton.tintColor = .black
         
         navigationItem.rightBarButtonItem = settingsRightBarButton
+        
+        let activityStackLeftBarButton = UIBarButtonItem(image: UIImage(systemName: "rectangle.stack", withConfiguration: config), style: .plain, target: self, action: #selector(activitiesStackTapped))
+        
+        activityStackLeftBarButton.tintColor = .black
+        
+        navigationItem.leftBarButtonItem = activityStackLeftBarButton
     }
     
     @objc private func settingsTapped() {
-//        print("settings tapped")
-        
-//        parametersVC.modalPresentationStyle = .fullScreen
-//        parametersVC.boredAppVC = self
         self.present(parametersVC, animated: true, completion: nil)
-
-        
+    }
+    
+    @objc private func activitiesStackTapped() {
+        navigationController?.pushViewController(savedActivitiesVC, animated: true)
     }
     
     private func setupScrollView() {
@@ -104,16 +131,44 @@ class BoredAppViewController: UIViewController {
         ])
     }
     
-    private func setupAgainButton() {
-        scrollView.addSubview(againButton)
+    private func setupButtonsStackView() {
+        buttonsStackView.addArrangedSubview(saveActivityButton)
+        buttonsStackView.addArrangedSubview(againButton)
         
+        saveActivityButton.addTarget(self, action: #selector(saveActivityButtonTapped), for: .touchUpInside)
         againButton.addTarget(self, action: #selector(againButtonTapped), for: .touchUpInside)
         
-        NSLayoutConstraint.activate([
-            againButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 60.0),
-            againButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
-        ])
+        scrollView.addSubview(buttonsStackView)
         
+        NSLayoutConstraint.activate([
+            buttonsStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 60.0),
+            buttonsStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+        ])
+    }
+        
+    @objc private func saveActivityButtonTapped() {
+        print("saveActivityButton tapped")
+        
+        print(savedActivitiesVC.dataSource.last == currentActivity)
+        
+        var alreadyExist = false
+        
+        savedActivitiesVC.dataSource.forEach { activity in
+            if activity == currentActivity {
+                alreadyExist = true
+                
+                SPAlert.present(title: "already exist", message: "You already saved this activity", preset: .custom(UIImage(systemName: "exclamationmark.circle") ?? .checkmark), haptic: .warning, completion: nil)
+                
+                return
+            }
+        }
+        
+        if !alreadyExist {
+            savedActivitiesVC.dataSource.append(currentActivity)
+            SPAlert.present(title: "Activity saved", preset: .done)
+        }
+        
+        // TODO: - Alert
     }
     
     @objc private func againButtonTapped() {
@@ -149,29 +204,7 @@ class BoredAppViewController: UIViewController {
         ])
     }
     
-    private func startLoading(params: UserActivityChoice? = nil) {
-        
-        self.services.loadActivity(withParams: params) { [weak self] activity, error in
-            DispatchQueue.main.async {
-                
-                if let _ = error {
-                    
-                    SPAlert.present(title: "not found", message: "😔 pls change condition", preset: .custom(UIImage(systemName: "xmark") ?? .checkmark), haptic: .error, completion: nil)
-                    
-                    return
-                }
-                
-                if let data = activity {
-                    self?.cardView.activityLabel.text = data.activity
-                    self?.cardView.categorieTypeLabel.text = data.type
-                    self?.cardView.participantsNumberLabel.text = "\(data.participants)"
-                    self?.cardView.priceValueLabel.text = data.price == 0.0 ? "free" : "\(data.price)"
-                    self?.cardView.categorieTypeLabel.backgroundColor = self?.parametersVC.activityColor ?? UIColor(withRandomColor: ())
-                }
-            }
-        }
-        
-    }
+    
 
 }
 

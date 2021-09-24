@@ -1,26 +1,24 @@
 //
-//  CarView.swift
+//  ActivityCollectionViewCell.swift
 //  BoredApp
 //
-//  Created by Gleb Tregubov on 21.09.2021.
+//  Created by Gleb Tregubov on 24.09.2021.
 //
 
 import UIKit
 
-class CardView: UIView {
+class ActivityCollectionViewCell: UICollectionViewCell {
     
-    let participantsNumber = 1
+    static let reuseIdentifier = "ActivityCellId"
     
-    let priceValue = 0
-    
-    let categorieTypeLabel = CategorieTypeLabel(withText: "          ", backgroundColor: UIColor.white)
+    let categorieTypeLabel = CategorieTypeLabel(withText: "     test     ", backgroundColor: UIColor.white)
     
     let activityLabel: UILabel = {
         let view = UILabel()
         
         view.numberOfLines = 0
         view.textAlignment = .left
-        view.font = UIFont(name: "Nunito-Bold", size: 50.0)
+        view.font = UIFont(name: "Nunito-Bold", size: 25.0)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.sizeToFit()
         
@@ -78,15 +76,22 @@ class CardView: UIView {
         
         return view
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupAppearance()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configureCell(withType type: String, color: UIColor, activity: String, participants: Int, price: Double) {
+        self.categorieTypeLabel.text = type
+        self.categorieTypeLabel.backgroundColor = color
+        self.activityLabel.text = activity
+        self.participantsNumberLabel.text = "\(participants)"
+        self.priceValueLabel.text = price != 0.0 ? "\(price)" : "free"
     }
     
     private func setupAppearance() {
@@ -108,47 +113,47 @@ class CardView: UIView {
     }
     
     private func setupActivityLabel() {
-        addSubview(activityLabel)
+        contentView.addSubview(activityLabel)
         
         NSLayoutConstraint.activate([
-            activityLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 23.0),
-            activityLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -23.0),
+            activityLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 23.0),
+            activityLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -23.0),
             activityLabel.topAnchor.constraint(equalTo: categorieTypeLabel.bottomAnchor, constant: 10.0),
-            activityLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -70.0)
+            activityLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -70.0)
         ])
     }
     
     private func setupCategorieTypeLabel() {
-        addSubview(categorieTypeLabel)
+        contentView.addSubview(categorieTypeLabel)
         
         NSLayoutConstraint.activate([
-            categorieTypeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            categorieTypeLabel.topAnchor.constraint(equalTo: self.topAnchor),
+            categorieTypeLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            categorieTypeLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
             categorieTypeLabel.heightAnchor.constraint(equalToConstant: 40.0)
         ])
     }
     
     private func setupParticipantsStackView() {
-        addSubview(participantsStackView)
+        contentView.addSubview(participantsStackView)
         
         participantsStackView.addArrangedSubview(participantsNumberLabel)
-        participantsNumberLabel.text = "\(participantsNumber)"
+        participantsNumberLabel.text = "2" //"\(participantsNumber)"
         
         NSLayoutConstraint.activate([
-            participantsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 23.0),
-            participantsStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -23.0)
+            participantsStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 23.0),
+            participantsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -23.0)
         ])
     }
     
     private func setupPriceStackView() {
-        addSubview(priceStackView)
+        contentView.addSubview(priceStackView)
         
         priceStackView.addArrangedSubview(priceValueLabel)
-//        priceValueLabel.text = priceValue == 0 ? "free" : "\(priceValue)"
+        priceValueLabel.text = "free"
         
         NSLayoutConstraint.activate([
-            priceStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -23),
-            priceStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -23)
+            priceStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -23),
+            priceStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -23)
         ])
     }
     

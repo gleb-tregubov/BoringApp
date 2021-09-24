@@ -17,6 +17,11 @@
 		536A93F926F974B000DB5D8D /* BoredAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A93F826F974B000DB5D8D /* BoredAppViewController.swift */; };
 		536A93FE26F974B200DB5D8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 536A93FD26F974B200DB5D8D /* Assets.xcassets */; };
 		536A940126F974B200DB5D8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 536A93FF26F974B200DB5D8D /* LaunchScreen.storyboard */; };
+		537A7EDE26FE1EF30065B898 /* BoredAppViewController + Services Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A7EDD26FE1EF30065B898 /* BoredAppViewController + Services Interface.swift */; };
+		537A7EE126FE2BF40065B898 /* SavedActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A7EE026FE2BF40065B898 /* SavedActivitiesViewController.swift */; };
+		537A7EE526FE32090065B898 /* SavedActivitiesViewController + CollectionView Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A7EE426FE32090065B898 /* SavedActivitiesViewController + CollectionView Delegate.swift */; };
+		537A7EE826FE328C0065B898 /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A7EE726FE328C0065B898 /* ActivityCollectionViewCell.swift */; };
+		537A7EEC26FE38AE0065B898 /* SavedActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A7EEB26FE38AE0065B898 /* SavedActivityModel.swift */; };
 		53D74EC026F981C5003BCEFA /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D74EBF26F981C5003BCEFA /* NavigationViewController.swift */; };
 		53D74EC526F983E3003BCEFA /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53D74EC426F983E3003BCEFA /* Nunito-ExtraBold.ttf */; };
 		53D74ECC26F9970D003BCEFA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D74ECB26F9970D003BCEFA /* CardView.swift */; };
@@ -71,6 +76,11 @@
 		536A940726F974B200DB5D8D /* BoredAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoredAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		536A940D26F974B200DB5D8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		536A941226F974B200DB5D8D /* BoredAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoredAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		537A7EDD26FE1EF30065B898 /* BoredAppViewController + Services Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoredAppViewController + Services Interface.swift"; sourceTree = "<group>"; };
+		537A7EE026FE2BF40065B898 /* SavedActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedActivitiesViewController.swift; sourceTree = "<group>"; };
+		537A7EE426FE32090065B898 /* SavedActivitiesViewController + CollectionView Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedActivitiesViewController + CollectionView Delegate.swift"; sourceTree = "<group>"; };
+		537A7EE726FE328C0065B898 /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
+		537A7EEB26FE38AE0065B898 /* SavedActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedActivityModel.swift; sourceTree = "<group>"; };
 		53D74EBF26F981C5003BCEFA /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		53D74EC426F983E3003BCEFA /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		53D74ECB26F9970D003BCEFA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -173,6 +183,24 @@
 			path = BoredAppTests;
 			sourceTree = "<group>";
 		};
+		537A7EDF26FE2BC90065B898 /* SavedActivities */ = {
+			isa = PBXGroup;
+			children = (
+				537A7EE626FE32530065B898 /* Views */,
+				537A7EE026FE2BF40065B898 /* SavedActivitiesViewController.swift */,
+				537A7EE426FE32090065B898 /* SavedActivitiesViewController + CollectionView Delegate.swift */,
+			);
+			path = SavedActivities;
+			sourceTree = "<group>";
+		};
+		537A7EE626FE32530065B898 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				537A7EE726FE328C0065B898 /* ActivityCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		53D74EC126F98283003BCEFA /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				53D74EC726F989E4003BCEFA /* Controllers */,
+				537A7EDF26FE2BC90065B898 /* SavedActivities */,
 				53D74EC926F98A18003BCEFA /* BoredApp */,
 				53D74ED426FA1487003BCEFA /* Parameters */,
 			);
@@ -216,6 +245,7 @@
 			children = (
 				53DA766926FB186600F199BE /* Views */,
 				536A93F826F974B000DB5D8D /* BoredAppViewController.swift */,
+				537A7EDD26FE1EF30065B898 /* BoredAppViewController + Services Interface.swift */,
 			);
 			path = BoredApp;
 			sourceTree = "<group>";
@@ -290,6 +320,7 @@
 			children = (
 				53DA767326FB77D200F199BE /* ActivityModel.swift */,
 				53DA767726FBA0D300F199BE /* UserActivityChoiceModel.swift */,
+				537A7EEB26FE38AE0065B898 /* SavedActivityModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -562,6 +593,7 @@
 				53D74ED826FA1F8F003BCEFA /* PriceToggleSettingsTableViewCell.swift in Sources */,
 				53DA767626FB78BE00F199BE /* JSONParser.swift in Sources */,
 				53DA766326FADA9700F199BE /* CategoryTypeCollectionViewCell.swift in Sources */,
+				537A7EE526FE32090065B898 /* SavedActivitiesViewController + CollectionView Delegate.swift in Sources */,
 				53DA766526FADD4300F199BE /* ParametersViewController + Collection View Delegate.swift in Sources */,
 				53DA766126FAD5F700F199BE /* CategoriesTypesTableViewCell.swift in Sources */,
 				53D74ED326F9F8F5003BCEFA /* Helpers.swift in Sources */,
@@ -569,14 +601,18 @@
 				53D74ECC26F9970D003BCEFA /* CardView.swift in Sources */,
 				53DA767826FBA0D300F199BE /* UserActivityChoiceModel.swift in Sources */,
 				53D74ED026F9BA25003BCEFA /* CategorieTypeLabel.swift in Sources */,
+				537A7EE126FE2BF40065B898 /* SavedActivitiesViewController.swift in Sources */,
 				53D74ED626FA14E3003BCEFA /* ParametersViewController.swift in Sources */,
 				53DA767426FB77D200F199BE /* ActivityModel.swift in Sources */,
 				536A93F926F974B000DB5D8D /* BoredAppViewController.swift in Sources */,
 				53DA766726FB066100F199BE /* ParametersViewController + Responders Delegates.swift in Sources */,
+				537A7EE826FE328C0065B898 /* ActivityCollectionViewCell.swift in Sources */,
 				536A93F526F974B000DB5D8D /* AppDelegate.swift in Sources */,
+				537A7EDE26FE1EF30065B898 /* BoredAppViewController + Services Interface.swift in Sources */,
 				536A93F726F974B000DB5D8D /* SceneDelegate.swift in Sources */,
 				53DA767126FB754D00F199BE /* Services.swift in Sources */,
 				53D74EDC26FA2729003BCEFA /* ParticipantsTextFieldSettingsTableViewCell.swift in Sources */,
+				537A7EEC26FE38AE0065B898 /* SavedActivityModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
