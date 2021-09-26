@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ServicesProtocol {
-    func loadActivity(withParams params: UserActivityChoice?, withCompletion completion: @escaping (_ activity: Activity?, _ error: Error?) -> Void)
+    func loadActivity(withParams params: UserActivityChoiceModel?, withCompletion completion: @escaping (_ activity: ActivityModel?, _ error: Error?) -> Void)
 }
 
 struct Services: ServicesProtocol {
@@ -17,7 +17,7 @@ struct Services: ServicesProtocol {
     
     let parser = JSONParser()
     
-    func loadActivity(withParams params: UserActivityChoice? = nil, withCompletion completion: @escaping (_ activity: Activity?, _ error: Error?) -> Void) {
+    func loadActivity(withParams params: UserActivityChoiceModel? = nil, withCompletion completion: @escaping (_ activity: ActivityModel?, _ error: Error?) -> Void) {
         
         var components = URLComponents()
         var queryItems = [URLQueryItem]()

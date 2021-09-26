@@ -12,8 +12,25 @@
 
 import UIKit
 import SPAlert
+import CoreData
 
 class BoredAppViewController: UIViewController {
+    
+    private let viewContext: NSManagedObjectContext = {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        context.automaticallyMergesChangesFromParent = true
+        
+        return context
+    }()
+    
+    private let newBackgroundContext: NSManagedObjectContext = {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.newBackgroundContext()
+        
+        context.automaticallyMergesChangesFromParent = true
+        
+        return context
+    }()
     
     let services: ServicesProtocol = Services()
     
@@ -21,7 +38,7 @@ class BoredAppViewController: UIViewController {
     
     let savedActivitiesVC = SavedActivitiesViewController()
     
-    var currentActivity: SavedActivityModel!
+    var currentActivity: SavedActivityModel?
     
     private let scrollView: UIScrollView = {
         
@@ -73,12 +90,30 @@ class BoredAppViewController: UIViewController {
     }()
     
     let cardView = CardView()
+    
+//    func fetchActivities() -> [Activity] {
+//        let context = viewContext
+//
+//        let fetchRequest = Activity.activitiesFetchRequest()
+//
+//        do {
+//            let result = try context.fetch(fetchRequest)
+//            return result
+//        } catch let error {
+//            print("[!!!] Context Save Error, Actitivy doesnt saved")
+//            print("Error: \(error)")
+//        }
+//
+//        return [Activity]()
+//
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupAppearance()
         startLoading()
+        savedActivitiesVC.dataSource = CoreDataManager.fetchActivities(onContext: viewContext)
     }
     
     
@@ -149,32 +184,69 @@ class BoredAppViewController: UIViewController {
     @objc private func saveActivityButtonTapped() {
         print("saveActivityButton tapped")
         
-        print(savedActivitiesVC.dataSource.last == currentActivity)
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Activity")
+//        let predicate = NSPredicate(format: "activity = %s", currentActivity.activity)
+//        fetchRequest.predicate = predicate
         
-        var alreadyExist = false
-        
-        savedActivitiesVC.dataSource.forEach { activity in
-            if activity == currentActivity {
-                alreadyExist = true
+        if let currentActivity = self.currentActivity {
+            if (!CoreDataManager.isActivityExist(currentActivity: currentActivity, onContext: newBackgroundContext)) {
+                let context = newBackgroundContext
                 
-                SPAlert.present(title: "already exist", message: "You already saved this activity", preset: .custom(UIImage(systemName: "exclamationmark.circle") ?? .checkmark), haptic: .warning, completion: nil)
+                let activity = CoreDataManager.saveActitvity(currentActivity: currentActivity, onContext: context)
+                
+                savedActivitiesVC.dataSource.append(activity)
+                
+                SPAlert.present(title: "Activity saved", preset: .done)
                 
                 return
+            } else {
+                SPAlert.present(title: "already exist", message: "You already saved this activity", preset: .custom(UIImage(systemName: "exclamationmark.circle") ?? .checkmark), haptic: .warning, completion: nil)
             }
+        } else {
+            SPAlert.present(title: "Error", preset: .error)
         }
         
-        if !alreadyExist {
-            savedActivitiesVC.dataSource.append(currentActivity)
-            SPAlert.present(title: "Activity saved", preset: .done)
-        }
+//        let context = newBackgroundContext
+//        
+//        let activity = Activity(context: context)
+//        
+//        context.performAndWait { [weak self] in
+//            activity.activity = self?.currentActivity.activity
+//            activity.type = self?.currentActivity.type
+//            activity.paricipantsNumber = Int32(self?.currentActivity.participants ?? 1)
+//            activity.price = self?.currentActivity.price ?? 0.0
+//        }
+//        
+//        do {
+//            try context.save()
+//            savedActivitiesVC.dataSource.append(activity)
+//        } catch let error {
+//            print("[!!!] Context Save Error, Actitivy doesnt saved")
+//            print("Error: \(error)")
+//        }
         
-        // TODO: - Alert
+//        var alreadyExist = false
+        
+//        savedActivitiesVC.dataSource.forEach { activity in
+//            if activity == currentActivity {
+//                alreadyExist = true
+//
+//                SPAlert.present(title: "already exist", message: "You already saved this activity", preset: .custom(UIImage(systemName: "exclamationmark.circle") ?? .checkmark), haptic: .warning, completion: nil)
+//
+//                return
+//            }
+//        }
+        
+//        if !alreadyExist {
+////            savedActivitiesVC.dataSource.append(currentActivity)
+//            SPAlert.present(title: "Activity saved", preset: .done)
+//        }
     }
     
     @objc private func againButtonTapped() {
 //        print("againButton tapped")
         
-        let userActivityChoice = UserActivityChoice(
+        let userActivityChoice = UserActivityChoiceModel(
             type: parametersVC.activity?.lowercased(),
             participants: parametersVC.participants,
             price: parametersVC.price)

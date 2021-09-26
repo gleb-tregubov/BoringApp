@@ -7,10 +7,11 @@
 
 import UIKit
 import SPAlert
+import CoreData
 
 class SavedActivitiesViewController: UIViewController {
     
-    var dataSource = [SavedActivityModel]()
+    var dataSource = [Activity]()
     
     lazy var activitiesCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -65,65 +66,63 @@ class SavedActivitiesViewController: UIViewController {
     }
     
     @objc private func addActivityTapped() {
-        let alert = UIAlertController(title: "New activity", message: "You can add your custom actitvity", preferredStyle: .alert)
-        
-        alert.addTextField { activityTextField in
-            activityTextField.text = ""
-            activityTextField.placeholder = "Activity"
-        }
-        
-        alert.addTextField { categoryTypeTextField in
-            categoryTypeTextField.text = ""
-            categoryTypeTextField.placeholder = "Activity Type"
-        }
-        
-        alert.addTextField { participantsTextField in
-            participantsTextField.text = ""
-            participantsTextField.placeholder = "Participants number"
-        }
-        
-        alert.addTextField { priceTextField in
-            priceTextField.text = ""
-            priceTextField.placeholder = "price in usd, like x.y"
-        }
-        
-        alert.addAction(UIAlertAction(title: "CheckOut", style: .default, handler: { [weak alert, dataSource] (_) in
-            let activityTextField = alert?.textFields![0]
-            let categoryTypeTextField = alert?.textFields![1]
-            let participantsTextField = alert?.textFields![2]
-            let priceTextField = alert?.textFields![3]
-            
-            let actitivy = activityTextField?.text
-            let type = categoryTypeTextField?.text
-            let participants = participantsTextField?.text
-            let price = priceTextField?.text
-            
-//            var isValid = true
-            
-            if (
-                    actitivy == ""
-                || type == ""
-                || participants == ""
-                || price == ""
-            ) {
-                SPAlert.present(title: "Empty field", message: "Please enter your data to field", preset: .error, haptic: .error, completion: nil)
-            } else {
-                let customActivity = SavedActivityModel(
-                    activity: actitivy!,
-                    type: type!,
-                    participants: Int(participants!) ?? 1,
-                    price: Double(price!) ?? 0.0,
-                    color: .systemBlue
-                )
-                
-                self.dataSource.append(customActivity)
-                self.activitiesCollectionView.reloadData()
-            }
-            
-            
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
+//        let alert = UIAlertController(title: "New activity", message: "You can add your custom actitvity", preferredStyle: .alert)
+//
+//        alert.addTextField { activityTextField in
+//            activityTextField.text = ""
+//            activityTextField.placeholder = "Activity"
+//        }
+//
+//        alert.addTextField { categoryTypeTextField in
+//            categoryTypeTextField.text = ""
+//            categoryTypeTextField.placeholder = "Activity Type"
+//        }
+//
+//        alert.addTextField { participantsTextField in
+//            participantsTextField.text = ""
+//            participantsTextField.placeholder = "Participants number"
+//        }
+//
+//        alert.addTextField { priceTextField in
+//            priceTextField.text = ""
+//            priceTextField.placeholder = "price in usd, like x.y"
+//        }
+//
+//        alert.addAction(UIAlertAction(title: "CheckOut", style: .default, handler: { [weak alert, dataSource] (_) in
+//            let activityTextField = alert?.textFields![0]
+//            let categoryTypeTextField = alert?.textFields![1]
+//            let participantsTextField = alert?.textFields![2]
+//            let priceTextField = alert?.textFields![3]
+//
+//            let actitivy = activityTextField?.text
+//            let type = categoryTypeTextField?.text
+//            let participants = participantsTextField?.text
+//            let price = priceTextField?.text
+//
+//            if (
+//                    actitivy == ""
+//                || type == ""
+//                || participants == ""
+//                || price == ""
+//            ) {
+//                SPAlert.present(title: "Empty field", message: "Please enter your data to field", preset: .error, haptic: .error, completion: nil)
+//            } else {
+//                let customActivity = SavedActivityModel(
+//                    activity: actitivy!,
+//                    type: type!,
+//                    participants: Int(participants!) ?? 1,
+//                    price: Double(price!) ?? 0.0,
+//                    color: .systemBlue
+//                )
+//
+//                self.dataSource.append(customActivity)
+//                self.activitiesCollectionView.reloadData()
+//            }
+//
+//            
+//        }))
+//
+//        self.present(alert, animated: true, completion: nil)
         
     }
     

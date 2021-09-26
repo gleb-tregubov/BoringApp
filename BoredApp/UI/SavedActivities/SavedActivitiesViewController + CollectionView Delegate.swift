@@ -39,7 +39,14 @@ extension SavedActivitiesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ActivityCollectionViewCell.reuseIdentifier, for: indexPath) as! ActivityCollectionViewCell
         
-        cell.configureCell(withType: dataSource[indexPath.row].type, color: dataSource[indexPath.row].color, activity: dataSource[indexPath.row].activity, participants: dataSource[indexPath.row].participants, price: dataSource[indexPath.row].price)
+        cell.configureCell(
+            withType: dataSource[indexPath.row].type ?? "no type",
+            color: UIColor(withRandomColor: ()),
+//           color: dataSource[indexPath.row].color,
+           activity: dataSource[indexPath.row].activity ?? "",
+            participants: Int(dataSource[indexPath.row].paricipantsNumber),
+           price: dataSource[indexPath.row].price
+        )
         
         return cell
     }

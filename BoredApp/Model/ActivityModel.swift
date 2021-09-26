@@ -17,7 +17,7 @@ protocol ActivityModelProtocol {
     var key: String { get }
 }
 
-struct Activity: ActivityModelProtocol, Codable {
+struct ActivityModel: ActivityModelProtocol, Codable {
     let activity: String
     let accessibility: Double
     let type: String

@@ -13,7 +13,7 @@ protocol UserActivityChoiceModelProtocol {
     var price: Bool { get }
 }
 
-struct UserActivityChoice: UserActivityChoiceModelProtocol {
+struct UserActivityChoiceModel: UserActivityChoiceModelProtocol {
     let type: String?
     let participants: Int?
     let price: Bool

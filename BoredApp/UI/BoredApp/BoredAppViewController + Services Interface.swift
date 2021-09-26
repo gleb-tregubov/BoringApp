@@ -10,7 +10,7 @@ import SPAlert
 
 extension BoredAppViewController {
     
-    func startLoading(params: UserActivityChoice? = nil) {
+    func startLoading(params: UserActivityChoiceModel? = nil) {
         
         self.services.loadActivity(withParams: params) { [weak self] activity, error in
             DispatchQueue.main.async {
