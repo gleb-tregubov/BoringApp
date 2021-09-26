@@ -12,7 +12,7 @@ extension ParametersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 240.0
+            return 285.0
         case 1:
             return 90.0
         case 2:
