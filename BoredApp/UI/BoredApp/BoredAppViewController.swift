@@ -90,23 +90,6 @@ class BoredAppViewController: UIViewController {
     }()
     
     let cardView = CardView()
-    
-//    func fetchActivities() -> [Activity] {
-//        let context = viewContext
-//
-//        let fetchRequest = Activity.activitiesFetchRequest()
-//
-//        do {
-//            let result = try context.fetch(fetchRequest)
-//            return result
-//        } catch let error {
-//            print("[!!!] Context Save Error, Actitivy doesnt saved")
-//            print("Error: \(error)")
-//        }
-//
-//        return [Activity]()
-//
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -182,11 +165,6 @@ class BoredAppViewController: UIViewController {
     }
         
     @objc private func saveActivityButtonTapped() {
-        print("saveActivityButton tapped")
-        
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Activity")
-//        let predicate = NSPredicate(format: "activity = %s", currentActivity.activity)
-//        fetchRequest.predicate = predicate
         
         if let currentActivity = self.currentActivity {
             if (!CoreDataManager.isActivityExist(currentActivity: currentActivity, onContext: newBackgroundContext)) {
@@ -195,6 +173,8 @@ class BoredAppViewController: UIViewController {
                 let activity = CoreDataManager.saveActitvity(currentActivity: currentActivity, onContext: context)
                 
                 savedActivitiesVC.dataSource.append(activity)
+                
+                savedActivitiesVC.activitiesCollectionView.insertItems(at: [IndexPath(row: savedActivitiesVC.dataSource.count - 1, section: 0)])
                 
                 SPAlert.present(title: "Activity saved", preset: .done)
                 
@@ -206,45 +186,9 @@ class BoredAppViewController: UIViewController {
             SPAlert.present(title: "Error", preset: .error)
         }
         
-//        let context = newBackgroundContext
-//        
-//        let activity = Activity(context: context)
-//        
-//        context.performAndWait { [weak self] in
-//            activity.activity = self?.currentActivity.activity
-//            activity.type = self?.currentActivity.type
-//            activity.paricipantsNumber = Int32(self?.currentActivity.participants ?? 1)
-//            activity.price = self?.currentActivity.price ?? 0.0
-//        }
-//        
-//        do {
-//            try context.save()
-//            savedActivitiesVC.dataSource.append(activity)
-//        } catch let error {
-//            print("[!!!] Context Save Error, Actitivy doesnt saved")
-//            print("Error: \(error)")
-//        }
-        
-//        var alreadyExist = false
-        
-//        savedActivitiesVC.dataSource.forEach { activity in
-//            if activity == currentActivity {
-//                alreadyExist = true
-//
-//                SPAlert.present(title: "already exist", message: "You already saved this activity", preset: .custom(UIImage(systemName: "exclamationmark.circle") ?? .checkmark), haptic: .warning, completion: nil)
-//
-//                return
-//            }
-//        }
-        
-//        if !alreadyExist {
-////            savedActivitiesVC.dataSource.append(currentActivity)
-//            SPAlert.present(title: "Activity saved", preset: .done)
-//        }
     }
     
     @objc private func againButtonTapped() {
-//        print("againButton tapped")
         
         let userActivityChoice = UserActivityChoiceModel(
             type: parametersVC.activity?.lowercased(),
@@ -276,7 +220,5 @@ class BoredAppViewController: UIViewController {
         ])
     }
     
-    
-
 }
 
