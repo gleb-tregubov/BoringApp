@@ -2,6 +2,9 @@
 
 Built using XCode 12.4 (Swift 4)
 
+check `git branch -a` to show all remote repo, origin/develop is one you need!
+go $ `git checkout origin/develop`
+
 ### How to run ?
 
 1. Clone this repo `develop` branch is Actual
