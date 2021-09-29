@@ -7,7 +7,7 @@ go $ `git checkout origin/develop`
 
 ### How to run ?
 
-1. Clone this repo `develop` branch is Actual
-1. Chekout to `develop` branch
+1. Clone this repo `origin/develop` branch is Actual
+1. Chekout to `origin/develop` branch
 3. Run `pod install`
 4. Open `BoredApp.xcworkspace` and run the project on selected device or simulator
