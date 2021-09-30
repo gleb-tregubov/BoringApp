@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/glebtregubov/Desktop/XCode Projects/BoredApp/Activity+CoreDataClass.swift">
+      location = "group:/Users/glebtregubov/Desktop/XCode Projects/BoredApp/CoreData/Activity+CoreDataClass.swift">
    </FileRef>
    <FileRef
-      location = "group:/Users/glebtregubov/Desktop/XCode Projects/BoredApp/Activity+CoreDataProperties.swift">
+      location = "group:/Users/glebtregubov/Desktop/XCode Projects/BoredApp/CoreData/Activity+CoreDataProperties.swift">
    </FileRef>
    <FileRef
       location = "group:BoredApp.xcodeproj">

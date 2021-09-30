@@ -2,7 +2,7 @@
 //  Activity+CoreDataClass.swift
 //  
 //
-//  Created by Gleb Tregubov on 25.09.2021.
+//  Created by Gleb Tregubov on 30.09.2021.
 //
 //
 
